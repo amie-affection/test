@@ -45,7 +45,7 @@ body {
 
 .page-header__burgerMenu:hover {
   cursor: pointer;
-  background-color: black;
+  background-color: red;
 }
 
 .page-header__burgerLineWrapper {
