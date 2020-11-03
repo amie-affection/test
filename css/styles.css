@@ -23,8 +23,8 @@ body {
 }
 
 .page-header__burgerMenu {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   float: right;
   display: flex;
   justify-content: center;
@@ -79,6 +79,7 @@ body {
 .page-header__burgerLine1_active {
   width: 30px;
   transform: translate(0, 8px) rotate(45deg);
+  -webkit-transform: translate(0, 8px) rotate(45deg);
 }
 
 .page-header__burgerLine2_active {
@@ -88,6 +89,7 @@ body {
 .page-header__burgerLine3_active {
   width: 30px;
   transform: translate(0, -8px) rotate(-45deg);
+  -webkit-transform: translate(0, -8px) rotate(-45deg)
 }
 
 .main-page {
@@ -96,10 +98,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 
 .toggle {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg)
 }
 
 .main-page,
@@ -139,6 +143,7 @@ body {
 
 .main-page__back {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 @media (min-width: 768px) {
