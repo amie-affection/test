@@ -23,8 +23,8 @@ body {
 }
 
 .page-header__burgerMenu {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   float: right;
   display: flex;
   justify-content: center;
@@ -139,4 +139,11 @@ body {
 
 .main-page__back {
   transform: rotateY(180deg);
+}
+
+@media (min-width: 768px) {
+  .page-header__burgerMenu {
+    width: 150px;
+    height: 150px;
+  }
 }

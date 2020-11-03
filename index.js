@@ -9,12 +9,12 @@ console.log(burgerLine1);
 console.log(burgerLine2);
 console.log(burgerLine3);
 
-const clickHandler = (e) => {
+const clickHandler = () => {
   burgerLine1.classList.toggle("page-header__burgerLine1_active");
   burgerLine1.classList.toggle("page-header__burgerLine1");
 
   burgerLine2.classList.toggle("page-header__burgerLine2_active");
-  burgerLine2.classList.toggle("page-header__burgerLine2");
+  burgerLine2.classList.toggle("page-header__burgerLine3");
 
   burgerLine3.classList.toggle("page-header__burgerLine3_active");
   burgerLine3.classList.toggle("page-header__burgerLine3");
