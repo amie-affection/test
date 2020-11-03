@@ -1,0 +1,142 @@
+html {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: cornflowerblue;
+}
+
+.page-header {
+  margin: 20px;
+}
+
+.page-header__burgerMenu {
+  width: 150px;
+  height: 150px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-header__burgerMenu:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+.page-header__burgerLineWrapper {
+  width: 30px;
+}
+
+.page-header__burgerLine {
+  background-color: #fff;
+  height: 3px;
+  position: relative;
+  transition: all 0.5s linear;
+}
+
+.page-header__burgerLine:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.page-header__burgerLine1 {
+  width: 25px;
+}
+
+.page-header__burgerLine2 {
+  width: 30px;
+}
+
+.page-header__burgerLine3 {
+  width: 20px;
+}
+
+.page-header__burgerMenu:hover .page-header__burgerLine1 {
+  width: 30px;
+}
+
+.page-header__burgerMenu:hover .page-header__burgerLine2 {
+  width: 20px;
+}
+
+.page-header__burgerMenu:hover .page-header__burgerLine3 {
+  width: 25px;
+}
+
+.page-header__burgerLine1_active {
+  width: 30px;
+  transform: translate(0, 8px) rotate(45deg);
+}
+
+.page-header__burgerLine2_active {
+  opacity: 0;
+}
+
+.page-header__burgerLine3_active {
+  width: 30px;
+  transform: translate(0, -8px) rotate(-45deg);
+}
+
+.main-page {
+  perspective: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle {
+  transform: rotateY(180deg);
+}
+
+.main-page,
+.main-page__front,
+.main-page__back {
+  height: 50vh;
+  width: 50vh;
+}
+
+.main-page__front {
+  background-image: url("https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80");
+  background-size: cover;
+}
+
+.main-page__back {
+  background-color: darkred;
+  object-fit: cover;
+}
+
+.img-wrapper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.main-page__front,
+.main-page__back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-page__front {
+  z-index: 2;
+}
+
+.main-page__back {
+  transform: rotateY(180deg);
+}
