@@ -33,4 +33,10 @@ const showVideo = () => {
   video.play();
 };
 
+const showPhoto = () => {
+  mainPage.classList.toggle("toggle");
+  video.pause();
+};
+
 photo.addEventListener("click", showVideo);
+video.addEventListener("click", showPhoto);
