@@ -1,5 +1,6 @@
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img {
@@ -11,7 +12,8 @@ img {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
@@ -26,10 +28,19 @@ body {
   width: 80px;
   height: 80px;
   float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .page-header__burgerMenu:hover {
@@ -45,6 +56,8 @@ body {
   background-color: #fff;
   height: 3px;
   position: relative;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 
@@ -78,7 +91,8 @@ body {
 
 .page-header__burgerLine1_active {
   width: 30px;
-  transform: translate(0, 8px) rotate(45deg);
+  -ms-transform: translate(0, 8px) rotate(45deg);
+      transform: translate(0, 8px) rotate(45deg);
   -webkit-transform: translate(0, 8px) rotate(45deg);
 }
 
@@ -88,16 +102,19 @@ body {
 
 .page-header__burgerLine3_active {
   width: 30px;
-  transform: translate(0, -8px) rotate(-45deg);
+  -ms-transform: translate(0, -8px) rotate(-45deg);
+      transform: translate(0, -8px) rotate(-45deg);
   -webkit-transform: translate(0, -8px) rotate(-45deg)
 }
 
 .main-page {
-  perspective: 1000;
+  -webkit-perspective: 1000;
+          perspective: 1000;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
 
@@ -120,18 +137,23 @@ body {
 
 .main-page__back {
   background-color: darkred;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .img-wrapper {
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
   transition: 0.6s;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   position: relative;
 }
 
 .main-page__front,
 .main-page__back {
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
