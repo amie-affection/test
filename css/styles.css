@@ -123,6 +123,10 @@ body {
   -webkit-transform: rotateY(180deg)
 }
 
+.invisible {
+  z-index: -10;
+}
+
 .main-page,
 .main-page__front,
 .main-page__back {
